@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
             searchButton.textContent = "Searching...";
             searchButton.disabled = true;
 
+
             // const response = await fetch(url);
 
             const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 method: "POST",
                 headers: myHeaders,
                 body: graphql,
-                redirect: "follow"
+                // redirect: "follow"
             }
 
 
