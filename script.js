@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             myHeaders.append("content-type", "application/json");
 
             const graphql = JSON.stringify({
-                query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) {\n    submitStats {\n      acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n    }\n  }\n}\n    ",
+                query: "\n    query userSessionProgress($username: String!) {\n  allQuestionsCount {\n    difficulty\n    count\n  }\n  matchedUser(username: $username) {\n    submitStats {\n      acSubmissionNum {\n        difficulty\n        count\n        submissions\n      }\n      totalSubmissionNum {\n        difficulty\n        count\n  submissions\n      }\n    }\n  }\n}\n    ",
 
 
                 variables: { "username": `${username}` }
@@ -159,9 +159,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// 1:13 tt
+
 
 //  const url = `https://leetcode-stats-api.herokuapp.com/${username}`
+
 
 
 
